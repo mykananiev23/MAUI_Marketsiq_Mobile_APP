@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
+             x:Class="Test_maui_connection.DetailMarket"
+             Title="DetailMarket">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="600"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="400" />
+                        <RowDefinition Height="200" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                
+                    <lvc:CartesianChart
+                        Grid.Row="0"
+                        Series="{Binding Series}"
+                        XAxes="{Binding XAxes}">
+                    </lvc:CartesianChart>
+
+                    <Label BackgroundColor="{StaticResource Primary}" Grid.Row="1" Text="{Binding Symbol.Name}" />
+                </Grid>
+
+                <Label Margin="20,0" BackgroundColor="{StaticResource Primary}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1" Text="{Binding Symbol.Name}" />
+                <Label Grid.Row="2" Text="{Binding Symbol.Name}" />
+                <Label Grid.Row="3" Text="{Binding Symbol.Name}" />
+                <Label Grid.Row="4" Text="{Binding Symbol.Name}" />
+                <Label Grid.Row="5" Text="{Binding Symbol.Name}" />
+                <Label Grid.Row="6" Text="{Binding Symbol.Name}" />
+                <Label Grid.Row="7" Text="{Binding Symbol.Name}" />
+                <Label Grid.Row="8" Text="{Binding Symbol.Name}" />
+            </Grid>
+        </ScrollView>   
+    </ContentPage.Content>
+</ContentPage>

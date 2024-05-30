@@ -9,6 +9,6 @@ public partial class FlyoutFooter : ContentView
 
 	private async void OnLogOutHandler(object sender, EventArgs e)
 	{
-
+		await Shell.Current.GoToAsync($"//MainPage");
 	}
 }

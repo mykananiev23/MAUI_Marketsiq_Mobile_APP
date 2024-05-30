@@ -1,5 +1,8 @@
 ﻿using IdentityModel.OidcClient;
 using Microsoft.Extensions.Logging;
+using Quantower.API.Client;
+using Test_maui_connection.Controls;
+using SkiaSharp.Views.Maui.Controls.Hosting;
 
 namespace Test_maui_connection
 {
@@ -9,6 +12,7 @@ namespace Test_maui_connection
         {
             var builder = MauiApp.CreateBuilder();
             builder
+                .UseSkiaSharp(true)
                 .UseMauiApp<App>()
                 .ConfigureFonts(fonts =>
                 {
@@ -29,6 +33,8 @@ namespace Test_maui_connection
 
                 Browser = new LoginOAuthBrowser()
             }));
+
+            builder.Services.AddSingleton<QApiServices>();
 
             builder.Services.AddSingleton<MainPage>();
 

@@ -43,11 +43,10 @@
         <controls:FlyoutFooter />
     </Shell.FlyoutFooter>
 
-    <ShellContent
-        Title="Login"
+    <ShellContent Title="MainPage"
         Style="{StaticResource DomesticShell}"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Route="MainPage"/>
 
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
         <Tab Title="Market"

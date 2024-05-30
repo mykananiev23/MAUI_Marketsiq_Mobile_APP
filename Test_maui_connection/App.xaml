@@ -22,6 +22,30 @@
                            verticaloptions="center" />-->
                 </Grid>
             </DataTemplate>
+
+            <DataTemplate x:Key="MarketSymbolTemplate">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="40" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition  />
+                        <ColumnDefinition  />
+                        <ColumnDefinition  />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" HorizontalOptions="Center"
+                            VerticalOptions="Center" Text="{Binding Name}"></Label>
+                    <Label Grid.Column="1" HorizontalOptions="Center"
+                            VerticalOptions="Center" Text="{Binding Description}"></Label>
+                    <Label Grid.Column="3" HorizontalOptions="Center"
+                            VerticalOptions="Center" Text="{Binding Type}"></Label>
+                    <Label Grid.Column="0" HorizontalOptions="Center"
+                            VerticalOptions="Center" Grid.Row="1" Text="22:22:22 PM |"></Label>
+                    <Label  Grid.Column="1" HorizontalOptions="Center"
+                            VerticalOptions="Center" Grid.Row="1" Text="Index"></Label>
+                </Grid>
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
