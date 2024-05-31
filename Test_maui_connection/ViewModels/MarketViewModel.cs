@@ -9,7 +9,7 @@ namespace Test_maui_connection.ViewModels
 {
     class MarketViewModel: IQueryAttributable, INotifyPropertyChanged
     {
-        public Symbol Symbol { get; private set; }
+        public MarketSymbol Symbol { get; private set; }
 
         public Axis[] XAxes { get; set; }
 
