@@ -8,7 +8,7 @@
 
         public string Price { get; set; }
 
-        public string ChagePercentage { get; set; }
+        public string ChangePercentage { get; set; }
 
         public string Type { get; set; }
 

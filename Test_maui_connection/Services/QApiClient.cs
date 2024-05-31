@@ -8,6 +8,11 @@ namespace Test_maui_connection.Services
 {
     class QApiClient
     {
-        public static QApiClient _QApiCliet;
+        public static QApiClient _qApiClient;
+
+        public QApiClient (string apiKey)
+        {
+            _qApiClient = new QApiClient (apiKey);
+        }
     }
 }

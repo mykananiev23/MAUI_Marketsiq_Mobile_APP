@@ -29,6 +29,10 @@
             <Setter Property="Shell.BackgroundColor"
                     Value="{StaticResource Primary}" />
         </Style>
+        <Style x:Key="CollectionViewStyle" TargetType="CollectionView">
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="BackgroundColor" Value="LightGray" />
+        </Style>
     </Shell.Resources>
 
     <Shell.ToolbarItems>

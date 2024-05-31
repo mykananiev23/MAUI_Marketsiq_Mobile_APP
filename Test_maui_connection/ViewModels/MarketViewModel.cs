@@ -9,7 +9,7 @@ namespace Test_maui_connection.ViewModels
 {
     class MarketViewModel: IQueryAttributable, INotifyPropertyChanged
     {
-        public MarketSymbol Symbol { get; private set; }
+        public MarketSymbol MarketSymbol { get; private set; }
 
         public Axis[] XAxes { get; set; }
 
@@ -66,8 +66,8 @@ namespace Test_maui_connection.ViewModels
 
         public void ApplyQueryAttributes(IDictionary<string, object> query)
         {
-            Symbol = query["Symbol"] as Symbol;
-            OnPropertyChanged("Symbol");
+            MarketSymbol = query["MarketSymbol"] as MarketSymbol;
+            OnPropertyChanged("MarketSymbol");
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

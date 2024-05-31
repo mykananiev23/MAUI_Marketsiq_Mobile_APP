@@ -37,17 +37,17 @@
                         XAxes="{Binding XAxes}">
                     </lvc:CartesianChart>
 
-                    <Label BackgroundColor="{StaticResource Primary}" Grid.Row="1" Text="{Binding Symbol.Name}" />
+                    <Label BackgroundColor="{StaticResource Primary}" Grid.Row="1" Text="{Binding MarketSymbol.Name}" />
                 </Grid>
 
                 <Label Margin="20,0" BackgroundColor="{StaticResource Primary}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1" Text="{Binding Symbol.Name}" />
-                <Label Grid.Row="2" Text="{Binding Symbol.Name}" />
-                <Label Grid.Row="3" Text="{Binding Symbol.Name}" />
-                <Label Grid.Row="4" Text="{Binding Symbol.Name}" />
-                <Label Grid.Row="5" Text="{Binding Symbol.Name}" />
-                <Label Grid.Row="6" Text="{Binding Symbol.Name}" />
-                <Label Grid.Row="7" Text="{Binding Symbol.Name}" />
-                <Label Grid.Row="8" Text="{Binding Symbol.Name}" />
+                <Label Grid.Row="2" Text="{Binding MarketSymbol.Name}" />
+                <Label Grid.Row="3" Text="{Binding MarketSymbol.Name}" />
+                <Label Grid.Row="4" Text="{Binding MarketSymbol.Name}" />
+                <Label Grid.Row="5" Text="{Binding MarketSymbol.Name}" />
+                <Label Grid.Row="6" Text="{Binding MarketSymbol.Name}" />
+                <Label Grid.Row="7" Text="{Binding MarketSymbol.Name}" />
+                <Label Grid.Row="8" Text="{Binding MarketSymbol.Name}" />
             </Grid>
         </ScrollView>   
     </ContentPage.Content>

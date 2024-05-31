@@ -11,11 +11,11 @@ public partial class IndicesPage : ContentPage
 
 	async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
 	{
-		Symbol symbol = e.CurrentSelection.FirstOrDefault() as Symbol;
+        MarketSymbol symbol = e.CurrentSelection.FirstOrDefault() as MarketSymbol;
 
 		var navigationParameters = new Dictionary<string, object>
 		{
-			{ "Symbol",  symbol }
+			{ "MarketSymbol",  symbol }
 		};
 
 		await Shell.Current.GoToAsync($"Detail", navigationParameters);
