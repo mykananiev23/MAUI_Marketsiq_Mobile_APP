@@ -1,8 +1,7 @@
 ﻿using IdentityModel.OidcClient;
 using Microsoft.Extensions.Logging;
-using Quantower.API.Client;
-using Test_maui_connection.Controls;
 using SkiaSharp.Views.Maui.Controls.Hosting;
+using Test_maui_connection.Services;
 
 namespace Test_maui_connection
 {

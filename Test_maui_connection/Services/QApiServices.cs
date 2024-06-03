@@ -5,16 +5,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Test_maui_connection.Controls
+namespace Test_maui_connection.Services
 {
-    internal class QApiServices
+    class QApiServices
     {
-        public QApiClient _qApiClient;
+        public static QApiClient _qApiClient;
 
-        public QApiServices(string accessToken) {
+        public QApiServices(string accessToken)
+        {
             string dateEndpoint = @"https://data.marketsiq.co";
-            
-            _qApiClient = new QApiClient(new QClientConfig() {
+
+            _qApiClient = new QApiClient(new QClientConfig()
+            {
                 AccessToken = accessToken,
                 GatewayEndpoint = dateEndpoint,
                 ClientInfo = new QClientInfo()
@@ -25,6 +27,15 @@ namespace Test_maui_connection.Controls
                     GetClientTime = () => DateTime.UtcNow,
                 }
             });
+
+            CancellationToken token = new CancellationToken();
+
+            _qApiClient.Connect(token);
+        }
+
+        public QApiClient GetClient()
+        {
+            return _qApiClient;
         }
     }
 }

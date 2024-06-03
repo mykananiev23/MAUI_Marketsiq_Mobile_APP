@@ -1,6 +1,6 @@
 ﻿using IdentityModel.OidcClient;
 using Quantower.API.Client;
-using Test_maui_connection.Controls;
+using Test_maui_connection.Services;
 
 namespace Test_maui_connection
 {
@@ -29,7 +29,7 @@ namespace Test_maui_connection
             CancellationToken token = new CancellationToken();
 
             QApiServices _qApiSservices = new QApiServices(accessToken);
-            QApiClient _cClient = _qApiSservices._qApiClient;
+            QApiClient _cClient = _qApiSservices.GetClient();
 
             _cClient.Connect(token);
 
