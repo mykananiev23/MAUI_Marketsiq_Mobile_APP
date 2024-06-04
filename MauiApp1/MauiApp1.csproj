@@ -50,6 +50,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="IdentityModel" Version="4.1.1" />
+		<PackageReference Include="IdentityModel.OidcClient" Version="3.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
 	</ItemGroup>
@@ -73,6 +74,16 @@
 	  <Reference Include="ServerStreamModule">
 	    <HintPath>lib\ServerStreamModule.dll</HintPath>
 	  </Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Resources\Styles\CustomStyle.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Views\" />
 	</ItemGroup>
 
 </Project>

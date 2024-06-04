@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using IdentityModel.OidcClient;
+using Microsoft.Extensions.Logging;
 using Quantower.API.Client;
 
 namespace MauiApp1
@@ -19,6 +20,17 @@ namespace MauiApp1
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+
+            builder.Services.AddSingleton(new OidcClient(new()
+            {
+                Authority = "https://demo.duendesoftware.com",
+
+                ClientId = "interactive.public",
+                Scope = "openid profile api",
+                RedirectUri = "myapp://callback",
+
+                Browser = new LoginOAuthBrowser()
+            }));
 
             builder.Services.AddSingleton(new QApiClient(new QClientConfig()
             {

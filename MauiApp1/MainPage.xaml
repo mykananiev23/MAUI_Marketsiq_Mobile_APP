@@ -22,7 +22,7 @@
 
                 <Editor
                     x:Name="Label2"
-                    HeightRequest="200"
+                    HeightRequest="100"
                     />
 
                 <Button
