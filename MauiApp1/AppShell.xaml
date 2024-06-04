@@ -4,11 +4,54 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiApp1"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:market="clr-namespace:MauiApp1.Views.Market"
+    xmlns:view="clr-namespace:MauiApp1.Views"
+    xmlns:controls="clr-namespace:MauiApp1.Controls">
+
+    <Shell.FlyoutHeader>
+        <controls:FlyoutHeader></controls:FlyoutHeader>
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutFooter>
+        <controls:FlyoutFooter />
+    </Shell.FlyoutFooter>
 
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Market"
+         Route="Market"
+         Icon="market.png">
+            <ShellContent Title="Indices"
+                      Style="{StaticResource DomesticShell}"
+                      ContentTemplate="{DataTemplate market:IndicesPage}"
+                      Route="Indices"/>
+            <ShellContent Title="Forex"
+                      Style="{StaticResource DomesticShell}"
+                      ContentTemplate="{DataTemplate market:ForexPage}"
+                      Route="Forex"/>
+            <ShellContent Title="Commodity"
+                      Style="{StaticResource DomesticShell}"
+                      ContentTemplate="{DataTemplate market:CommodityPage}"
+                      Route="Commodity"/>
+            <ShellContent Title="Future"
+                      Style="{StaticResource DomesticShell}"
+                      ContentTemplate="{DataTemplate market:FuturePage}"
+                      Route="Future"/>
+            <ShellContent Title="Bond"
+                      Style="{StaticResource DomesticShell}"
+                      ContentTemplate="{DataTemplate market:BondPage}"
+                      Route="Bond"/>
+        </Tab>
+        <Tab Title="Watchlist"
+             Route="Watchlist"
+             Icon="watchlist.png">      
+            <ShellContent Title="Watchlist"
+                  Style="{StaticResource DomesticShell}"
+                  ContentTemplate="{DataTemplate view:WatchlistPage}"/>
+        </Tab>
+    </FlyoutItem>
 </Shell>

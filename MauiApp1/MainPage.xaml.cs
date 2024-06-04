@@ -57,7 +57,7 @@ namespace MauiApp1
             Label1.Text = sb.ToString();
         }
 
-        private void OnGotoMainView(object sender, EventArgs e)
+        private void OnHandleConnectionTest(object sender, EventArgs e)
         {
             CancellationToken token = new CancellationToken();
             var result = _apiClient.Connect(token);
@@ -85,6 +85,10 @@ namespace MauiApp1
                 });
             }
         }
-    }
 
+        private async void OnGotoMainView(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//Market/Indices");
+        }
+    }
 }
