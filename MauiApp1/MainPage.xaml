@@ -15,7 +15,7 @@
                 TextColor="{StaticResource Primary}"
                 SemanticProperties.HeadingLevel="Level1" />
 
-            <Label
+            <Editor
                 x:Name="Label1"
                 HeightRequest="100"
                 />

@@ -13,8 +13,6 @@ public class LoginOAuthBrowser : IdentityModel.OidcClient.Browser.IBrowser
                 new Uri(options.StartUrl),
                 new Uri(options.EndUrl));
 
-            Console.WriteLine(result.ToString());
-
             var url = new RequestUrl("myapp://callback")
                 .Create(new Parameters(result.Properties));
 
@@ -28,7 +26,7 @@ public class LoginOAuthBrowser : IdentityModel.OidcClient.Browser.IBrowser
         {
             return new BrowserResult
             {
-                ResultType = BrowserResultType.UserCancel,
+                ResultType = BrowserResultType.UserCancel
             };
         }
     }

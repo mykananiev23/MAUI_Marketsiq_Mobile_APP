@@ -5,20 +5,22 @@ using System.Diagnostics.Metrics;
 using Microsoft.Maui.Controls;
 using System.Text;
 using IdentityModel.OidcClient;
+using MauiApp1.Services;
 
 namespace MauiApp1
 {
     public partial class MainPage : ContentPage
     {
         private readonly OidcClient _client = default!;
-        private string? _currentAccessToken;
-        public readonly QApiClient _apiClient;
-        public MainPage(OidcClient client, QApiClient _qApiClient)
+        private string _currentAccessToken= "Uq5DNlNwIgG25uhXW0aots-878_9UvbdKc8lchFFDJg";
+        public QApiClient _apiClient;
+        public MarketsIQService _connectService;
+        public MainPage(OidcClient client, MarketsIQService connectService)
         {
             InitializeComponent();
 
             _client = client;
-            _apiClient = _qApiClient;
+            _connectService = connectService;
         }
 
         private async void OnLoginClicked(object sender, EventArgs e)
@@ -60,19 +62,15 @@ namespace MauiApp1
         private void OnHandleConnectionTest(object sender, EventArgs e)
         {
             CancellationToken token = new CancellationToken();
-            var result = _apiClient.Connect(token);
-            Label2.Text = "Connect: " + result.ErrorText;
 
-            QInstrument[] instruments = GetInstruments(token);
+            _connectService.InintConnectService(_currentAccessToken);
+            _apiClient = _connectService.GetApiClient();
+
+            QInstrument[] instruments = _connectService.GetInstruments();
             Label2.Text = "Total symbols count: " + instruments.Length;
 
             _apiClient.Quotes.MarketQuoteReceived += Quotes_MarketQuoteReceived;
             _apiClient.Quotes.Subscribe(instruments[0].Id, QMarketQuoteType.Trade);
-        }
-
-        private QInstrument[] GetInstruments(CancellationToken token)
-        {
-            return _apiClient.Instruments.GetInstruments(token).Value;
         }
 
         private void Quotes_MarketQuoteReceived(object sender, QEventArgs e)
