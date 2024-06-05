@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiApp1"
     xmlns:market="clr-namespace:MauiApp1.Views.Market"
+    xmlns:full="clr-namespace:MauiApp1.Views.Full"
     xmlns:view="clr-namespace:MauiApp1.Views"
     xmlns:controls="clr-namespace:MauiApp1.Controls">
 
@@ -52,6 +53,38 @@
             <ShellContent Title="Watchlist"
                   Style="{StaticResource DomesticShell}"
                   ContentTemplate="{DataTemplate view:WatchlistPage}"/>
+        </Tab>
+        <Tab Title="FullPage"
+             Route="FullPage"
+             Icon="foundation.png">
+            <ShellContent Title="Fx Forwards"
+                  Style="{StaticResource DomesticShell}"
+                  ContentTemplate="{DataTemplate full:FxForwardsPage}"
+                  Route="FxForwards" />
+            <ShellContent Title="LIBOR"
+                  Style="{StaticResource DomesticShell}"
+                  ContentTemplate="{DataTemplate full:LIBORPage}"
+                  Route="LIBOR" />
+            <ShellContent Title="Fx Spot"
+                  Style="{StaticResource DomesticShell}"
+                  ContentTemplate="{DataTemplate full:FxSpotPage}"
+                  Route="FxSpot" />
+            <ShellContent Title="Fx INR"
+                  Style="{StaticResource DomesticShell}"
+                  ContentTemplate="{DataTemplate full:FxINRPage}"
+                  Route="FxINR" />
+            <ShellContent Title="LME"
+                  Style="{StaticResource DomesticShell}"
+                  ContentTemplate="{DataTemplate full:LMEPage}"
+                  Route="LME" />
+        </Tab>
+        <Tab Title="Fx Cal"
+             Route="FxCal"
+             Icon="calculator.png">
+            <ShellContent Title="FxCal"
+                  Style="{StaticResource DomesticShell}"
+                  ContentTemplate="{DataTemplate view:FxCalPage}"
+                  Icon="setting.png"/>
         </Tab>
     </FlyoutItem>
 </Shell>

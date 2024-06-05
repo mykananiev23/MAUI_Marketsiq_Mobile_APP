@@ -3,49 +3,47 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.MainPage"
              Shell.NavBarIsVisible="False">
+    <HorizontalStackLayout HorizontalOptions="Center">
+        <VerticalStackLayout
+            VerticalOptions="Center"
+            Spacing="25">
+            <Label
+                Text="Market.IQ"
+                FontSize="60"
+                FontAttributes="Bold"
+                Style="{StaticResource Headline}"
+                TextColor="{StaticResource Primary}"
+                SemanticProperties.HeadingLevel="Level1" />
 
-        <HorizontalStackLayout HorizontalOptions="Center">
-            <VerticalStackLayout
-                VerticalOptions="Center"
-                Spacing="25">
-                <Label
-                    Text="Market.IQ"
-                    FontSize="60"
-                    FontAttributes="Bold"
-                    Style="{StaticResource Headline}"
-                    TextColor="{StaticResource Primary}"
-                    SemanticProperties.HeadingLevel="Level1" />
+            <Label
+                x:Name="Label1"
+                HeightRequest="100"
+                />
 
-                <Label
-                    x:Name="Label1"
-                    HeightRequest="100"
-                    />
+            <Editor
+                x:Name="Label2"
+                HeightRequest="100"
+                />
 
-                <Editor
-                    x:Name="Label2"
-                    HeightRequest="100"
-                    />
+            <Button
+                x:Name="LoginButton"
+                Text="Login"
+                BackgroundColor="{StaticResource Primary}"
+                Clicked="OnLoginClicked"
+                HorizontalOptions="Fill" />
 
-                <Button
-                    x:Name="LoginButton"
-                    Text="Login"
-                    BackgroundColor="{StaticResource Primary}"
-                    Clicked="OnLoginClicked"
-                    HorizontalOptions="Fill" />
+            <Button
+                x:Name="GotoMainView"
+                Text="TestConnect"
+                BackgroundColor="{StaticResource Primary}"
+                Clicked="OnHandleConnectionTest"
+                HorizontalOptions="Fill" />
 
-                <Button
-                    x:Name="GotoMainView"
-                    Text="TestConnect"
-                    BackgroundColor="{StaticResource Primary}"
-                    Clicked="OnHandleConnectionTest"
-                    HorizontalOptions="Fill" />
-
-                <Button
-                    Text="Go Main"
-                    BackgroundColor="{StaticResource Primary}"
-                    Clicked="OnGotoMainView"
-                    HorizontalOptions="Fill" />
+            <Button
+                Text="Go Main"
+                BackgroundColor="{StaticResource Primary}"
+                Clicked="OnGotoMainView"
+                HorizontalOptions="Fill" />
         </VerticalStackLayout>
-        </HorizontalStackLayout>
-
+    </HorizontalStackLayout>
 </ContentPage>
