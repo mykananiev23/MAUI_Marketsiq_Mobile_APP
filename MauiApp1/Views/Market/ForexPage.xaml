@@ -3,10 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.Views.Market.ForexPage"
              Title="ForexPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <Grid Margin="20,35,20,20" BackgroundColor="{StaticResource Gray200}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0"  Text="By default, a Grid contains one row and one column." BackgroundColor="{StaticResource Gray400}" />
+            <Label Grid.Row="1" Grid.Column="1" Text="By default, a Grid contains one row and one column." BackgroundColor="{StaticResource Gray400}" />
+            <Label Grid.Row="1" Grid.Column="2" Text="By default, a Grid contains one row and one column." BackgroundColor="{StaticResource Gray400}" />
+        </Grid>
+    </ScrollView>
 </ContentPage>

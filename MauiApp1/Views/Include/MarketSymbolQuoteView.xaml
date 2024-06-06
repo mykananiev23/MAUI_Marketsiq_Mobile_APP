@@ -2,18 +2,25 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.Views.Include.MarketSymbolQuoteView">
-    <VerticalStackLayout>
-        <Label 
-            VerticalOptions="Center" 
-            HorizontalOptions="Center">
-            <Label.FormattedText>
-                <FormattedString>
-                    <Span Text="{Binding InstrumentId}" />
-                    <Span Text=" (" />
-                    <Span Text="{Binding TradeQuote.Price}" />
-                    <Span Text=")" />
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-    </VerticalStackLayout>
+    <ContentView.Resources>
+        <Style TargetType="Label">
+            
+        </Style>
+    </ContentView.Resources>
+    <StackLayout Padding="5" BackgroundColor="{StaticResource LightPrimary}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Text="{Binding Instrument.Name}"/>
+            <Label Grid.Row="1" Grid.Column="1" Text="{Binding TradeQuote.Price}"/>
+            <Label Grid.Row="1" Grid.Column="2" Text="{Binding TradeQuote.Time}"/>
+        </Grid>
+    </StackLayout>
 </ContentView>
