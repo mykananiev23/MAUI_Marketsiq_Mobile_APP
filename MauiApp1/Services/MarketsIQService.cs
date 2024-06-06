@@ -1,5 +1,4 @@
-﻿using Android.Telephony;
-using IdentityModel.OidcClient;
+﻿using IdentityModel.OidcClient;
 using Quantower.API.Client;
 using Quantower.API.Client.Models;
 using System;
@@ -18,7 +17,6 @@ namespace MauiApp1.Services
 
         public void InintConnectService(string accessToken)
         {
-            accessToken = "Uq5DNlNwIgG25uhXW0aots-878_9UvbdKc8lchFFDJg";
             qApiClient = new QApiClient(new QClientConfig()
             {
                 AccessToken = accessToken,
@@ -35,17 +33,12 @@ namespace MauiApp1.Services
             CancellationToken token = new CancellationToken();
             qApiClient.Connect(token);
 
-            instruments = _prevGetInstruments(token);
+            instruments = qApiClient.Instruments.GetInstruments(token).Value;
         }
 
         public QApiClient GetApiClient()
         {
             return qApiClient;
-        }
-
-        private QInstrument[] _prevGetInstruments(CancellationToken token)
-        {
-            return qApiClient.Instruments.GetInstruments(token).Value;
         }
 
         public QInstrument[] GetInstruments()

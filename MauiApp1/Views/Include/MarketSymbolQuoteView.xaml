@@ -8,9 +8,9 @@
             HorizontalOptions="Center">
             <Label.FormattedText>
                 <FormattedString>
-                    <Span Text="{Binding Name}" />
+                    <Span Text="{Binding InstrumentId}" />
                     <Span Text=" (" />
-                    <Span Text="{Binding Description}" />
+                    <Span Text="{Binding TradeQuote.Price}" />
                     <Span Text=")" />
                 </FormattedString>
             </Label.FormattedText>

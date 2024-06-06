@@ -45,19 +45,6 @@ namespace MauiApp1
             //    Browser = new LoginOAuthBrowser()
             //}));
 
-            //builder.Services.AddSingleton(new QApiClient(new QClientConfig()
-            //{
-            //    AccessToken = "Uq5DNlNwIgG25uhXW0aots-878_9UvbdKc8lchFFDJg",
-            //    GatewayEndpoint = "https://data.marketsiq.co",
-            //    ClientInfo = new QClientInfo
-            //    {
-            //        Id = Guid.NewGuid().ToString(),
-            //        Branding = "Markets.iq",
-            //        Version = new Version(1, 97, 0),
-            //        GetClientTime = () => DateTime.UtcNow,
-            //    }
-            //}));
-
             builder.Services.AddSingleton<MarketsIQService>();
 
             builder.Services.AddSingleton<MainPage>();

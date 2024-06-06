@@ -12,7 +12,7 @@ namespace MauiApp1
     public partial class MainPage : ContentPage
     {
         private readonly OidcClient _client = default!;
-        private string _currentAccessToken= "Uq5DNlNwIgG25uhXW0aots-878_9UvbdKc8lchFFDJg";
+        private string _currentAccessToken = "9I2DxcKL3dHrggvRzwOmB-GWHEBWCvNq4az2r1F_EtM";
         public QApiClient _apiClient;
         public MarketsIQService _connectService;
         public MainPage(OidcClient client, MarketsIQService connectService)
@@ -61,11 +61,8 @@ namespace MauiApp1
 
         private void OnHandleConnectionTest(object sender, EventArgs e)
         {
-            CancellationToken token = new CancellationToken();
-
             _connectService.InintConnectService(_currentAccessToken);
             _apiClient = _connectService.GetApiClient();
-
             QInstrument[] instruments = _connectService.GetInstruments();
             Label2.Text = "Total symbols count: " + instruments.Length;
 
@@ -79,7 +76,7 @@ namespace MauiApp1
             {
                 MainThread.BeginInvokeOnMainThread(() =>
                 {
-                    Label1.Text = $"Price: {qTrade.Price} Size: {qTrade.Size}";
+                    Label1.Text = $"Id: {qTrade.InstrumentId} Price: {qTrade.Price} Size: {qTrade.Size}";
                 });
             }
         }
