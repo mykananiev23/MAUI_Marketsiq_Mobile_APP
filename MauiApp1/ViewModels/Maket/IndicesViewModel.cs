@@ -19,7 +19,7 @@ namespace MauiApp1.ViewModels.Maket
         public IndicesViewModel(MarketsIQService connectService)
         {
             _client = connectService.GetApiClient();
-            Symbols = connectService.GetInstruments().Take(1).ToArray();
+            Symbols = connectService.GetInstruments().Take(2).ToArray();
             foreach (QInstrument instrument in Symbols)
             {
                 Lists.Add(new ListMainModel
