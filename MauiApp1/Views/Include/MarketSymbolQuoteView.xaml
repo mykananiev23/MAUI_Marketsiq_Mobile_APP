@@ -2,11 +2,6 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.Views.Include.MarketSymbolQuoteView">
-    <ContentView.Resources>
-        <Style TargetType="Label">
-            
-        </Style>
-    </ContentView.Resources>
     <StackLayout Padding="10" BackgroundColor="{StaticResource Gray100}">
         <Grid>
             <Grid.RowDefinitions>
@@ -15,7 +10,7 @@
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200" />
-                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="80" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Label Grid.Row="0" Grid.Column="0" Text="{Binding Instrument.Description}"/>
