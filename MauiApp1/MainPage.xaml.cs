@@ -1,8 +1,6 @@
 ﻿using Quantower.API.Client.Models.Quotes;
 using Quantower.API.Client;
 using Quantower.API.Client.Models;
-using System.Diagnostics.Metrics;
-using Microsoft.Maui.Controls;
 using System.Text;
 using IdentityModel.OidcClient;
 using MauiApp1.Services;

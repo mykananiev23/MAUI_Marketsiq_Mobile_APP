@@ -2,7 +2,6 @@
 using MauiApp1.Services;
 using MauiApp1.Views.Market;
 using Microsoft.Extensions.Logging;
-using Quantower.API.Client;
 
 namespace MauiApp1
 {
@@ -33,17 +32,6 @@ namespace MauiApp1
 
                 Browser = new LoginOAuthBrowser()
             }));
-
-            //builder.Services.AddSingleton(new OidcClient(new()
-            //{
-            //    Authority = "https://identity.data.marketsiq.co",
-
-            //    ClientId = "MarketsIQVendor",
-            //    Scope = "openid offline_access GatewayService InstrumentsService LicenceService HistoryService",
-            //    RedirectUri = "http://localhost:52448",
-
-            //    Browser = new LoginOAuthBrowser()
-            //}));
 
             builder.Services.AddSingleton<MarketsIQService>();
 
