@@ -8,7 +8,13 @@
         <CollectionView 
             Style="{StaticResource CollectionViewStyle}"
             ItemsSource="{Binding Lists}"
-            SelectionMode="Single">
+            SelectionMode="Single"
+            SelectionChanged="OnHandleMoveDetailPage">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical"
+                         Span="1"
+                         VerticalItemSpacing="10" />
+            </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <include:MarketSymbolQuoteView />
