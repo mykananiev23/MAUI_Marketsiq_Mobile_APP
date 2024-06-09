@@ -4,9 +4,11 @@
              x:Class="MauiApp1.Views.WatchlistPage"
              Title="WatchlistPage">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <HorizontalStackLayout>
+            
+        </HorizontalStackLayout>
+        <ScrollView>
+            
+        </ScrollView>
     </VerticalStackLayout>
 </ContentPage>

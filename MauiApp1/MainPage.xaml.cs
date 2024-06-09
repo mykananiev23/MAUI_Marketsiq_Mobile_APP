@@ -10,7 +10,7 @@ namespace MauiApp1
     public partial class MainPage : ContentPage
     {
         private readonly OidcClient _client = default!;
-        private string _currentAccessToken = "T_pdQ-GLNtu3Do2IzUxdv3N-0C0rt86FfvvPwEP4axM";
+        private string _currentAccessToken = "QPoKbMAKRjEEgGtMGzVvDITTGJKcEdYdUSZ80gOR0ho";
         public QApiClient _apiClient;
         public MarketsIQService _connectService;
         public MainPage(OidcClient client, MarketsIQService connectService)
@@ -57,15 +57,10 @@ namespace MauiApp1
             Label1.Text = sb.ToString();
         }
 
-        private void OnHandleConnectionTest(object sender, EventArgs e)
+        private async void OnHandleConnectionTest(object sender, EventArgs e)
         {
             _connectService.InintConnectService(_currentAccessToken);
-            _apiClient = _connectService.GetApiClient();
-            QInstrument[] instruments = _connectService.GetInstruments();
-            Label2.Text = "Total symbols count: " + instruments.Length;
-
-            _apiClient.Quotes.MarketQuoteReceived += Quotes_MarketQuoteReceived;
-            _apiClient.Quotes.Subscribe(instruments[0].Id, QMarketQuoteType.Trade);
+            await Shell.Current.GoToAsync("//Market/Indices");
         }
 
         private void Quotes_MarketQuoteReceived(object sender, QEventArgs e)
@@ -77,11 +72,6 @@ namespace MauiApp1
                     Label1.Text = $"Id: {qTrade.InstrumentId} Price: {qTrade.Price} Size: {qTrade.Size}";
                 });
             }
-        }
-
-        private async void OnGotoMainView(object sender, EventArgs e)
-        {
-            await Shell.Current.GoToAsync("//Market/Indices");
         }
     }
 }

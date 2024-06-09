@@ -38,12 +38,6 @@
                 BackgroundColor="{StaticResource Primary}"
                 Clicked="OnHandleConnectionTest"
                 HorizontalOptions="Fill" />
-
-            <Button
-                Text="Go Main"
-                BackgroundColor="{StaticResource Primary}"
-                Clicked="OnGotoMainView"
-                HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </HorizontalStackLayout>
 </ContentPage>
