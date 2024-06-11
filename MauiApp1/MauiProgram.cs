@@ -23,27 +23,27 @@ namespace MauiApp1
     		builder.Logging.AddDebug();
 #endif
 
-            builder.Services.AddSingleton(new OidcClient(new()
-            {
-                Authority = "https://demo.duendesoftware.com",
-
-                ClientId = "interactive.public",
-                Scope = "openid profile api",
-                RedirectUri = "myapp://callback",
-
-                Browser = new LoginOAuthBrowser()
-            }));
-
             //builder.Services.AddSingleton(new OidcClient(new()
             //{
-            //    Authority = "https://identity.data.marketsiq.co",
+            //    Authority = "https://demo.duendesoftware.com",
 
-            //    ClientId = "MAUIClient",
-            //    Scope = "openid profile email offline_access LicenceService",
-            //    RedirectUri = "marketsiq://callback",
+            //    ClientId = "interactive.public",
+            //    Scope = "openid profile api",
+            //    RedirectUri = "myapp://callback",
 
             //    Browser = new LoginOAuthBrowser()
             //}));
+
+            builder.Services.AddSingleton(new OidcClient(new()
+            {
+                Authority = "https://identity.data.marketsiq.co",
+
+                ClientId = "MAUIClient",
+                Scope = "openid profile email offline_access LicenceService",
+                RedirectUri = "marketsiq://callback",
+
+                Browser = new LoginOAuthBrowser()
+            }));
 
             builder.Services.AddSingleton<MarketsIQService>();
 

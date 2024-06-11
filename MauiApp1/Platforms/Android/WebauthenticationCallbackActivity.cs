@@ -9,6 +9,6 @@ namespace YourNameSpace;
               DataScheme = CALLBACK_SCHEME)]
 public class WebAuthenticationCallbackActivity : Microsoft.Maui.Authentication.WebAuthenticatorCallbackActivity
 {
-    //const string CALLBACK_SCHEME = "marketsiq";
-    const string CALLBACK_SCHEME = "myapp";
+    const string CALLBACK_SCHEME = "marketsiq";
+    //const string CALLBACK_SCHEME = "myapp";
 }
