@@ -12,10 +12,10 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>MauiApp1</ApplicationTitle>
+		<ApplicationTitle>MarketsIQ</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.mauiapp1</ApplicationId>
+		<ApplicationId>com.companyname.marketsiq</ApplicationId>
 		<ApplicationIdGuid>d93828b5-47e7-458b-9923-34d2033e6185</ApplicationIdGuid>
 
 		<!-- Versions -->

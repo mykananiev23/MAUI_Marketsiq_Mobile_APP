@@ -27,7 +27,7 @@
                 <ColumnDefinition Width="120" />
                 <ColumnDefinition Width="120" />
                 <ColumnDefinition Width="70" />
-                <ColumnDefinition Width="70" />
+                <ColumnDefinition Width="50" />
             </Grid.ColumnDefinitions>
             <Label Grid.Column="0"
            Text="SymbolName" />
@@ -37,8 +37,8 @@
            Text="Bid"
            HorizontalOptions="Center"/>
             <Label Grid.Column="3"
-           Text="Ask"
-           HorizontalOptions="Center"/>
+               Text="Ask"
+               HorizontalOptions="End"/>
         </Grid>
         <ScrollView Padding="10">
             <CollectionView 

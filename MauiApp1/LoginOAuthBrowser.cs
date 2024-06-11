@@ -16,6 +16,9 @@ public class LoginOAuthBrowser : IdentityModel.OidcClient.Browser.IBrowser
             var url = new RequestUrl("myapp://callback")
                 .Create(new Parameters(result.Properties));
 
+            //var url = new RequestUrl("marketsiq://callback")
+            //    .Create(new Parameters(result.Properties));
+
             return new BrowserResult
             {
                 Response = url,

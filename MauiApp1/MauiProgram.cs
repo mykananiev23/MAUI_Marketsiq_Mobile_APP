@@ -34,6 +34,17 @@ namespace MauiApp1
                 Browser = new LoginOAuthBrowser()
             }));
 
+            //builder.Services.AddSingleton(new OidcClient(new()
+            //{
+            //    Authority = "https://identity.data.marketsiq.co",
+
+            //    ClientId = "MAUIClient",
+            //    Scope = "openid profile email offline_access LicenceService",
+            //    RedirectUri = "marketsiq://callback",
+
+            //    Browser = new LoginOAuthBrowser()
+            //}));
+
             builder.Services.AddSingleton<MarketsIQService>();
 
             builder.Services.AddSingleton<MainPage>();
