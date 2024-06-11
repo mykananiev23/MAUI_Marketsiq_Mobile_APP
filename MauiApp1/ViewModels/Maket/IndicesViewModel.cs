@@ -1,5 +1,4 @@
-﻿using Google.Protobuf.Collections;
-using MauiApp1.Models.Market;
+﻿using MauiApp1.Models.Market;
 using MauiApp1.Services;
 using Quantower.API.Client;
 using Quantower.API.Client.Models;

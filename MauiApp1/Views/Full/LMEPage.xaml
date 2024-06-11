@@ -3,9 +3,163 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.Views.Full.LMEPage">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Picker 
+                Grid.Column="0" 
+                HorizontalTextAlignment="Center"
+                ItemsSource="{Binding Currencies}" 
+                SelectedItem="{Binding SelectedCurrency}" 
+                ItemDisplayBinding="{Binding Title}"/>
+            <Label Grid.Column="1"></Label>
+            <Label
+                Padding="0,0,10,0"
+                Grid.Column="2" 
+                VerticalOptions="Center"
+                HorizontalOptions="End"
+                Text="Copper" />
+            <Picker 
+                Grid.Column="3"
+                HorizontalTextAlignment="Center"
+                ItemsSource="{Binding Coppers}" 
+                SelectedItem="{Binding SelectedCopper}" 
+                ItemDisplayBinding="{Binding Title}" />
+        </Grid>
+        <ScrollView>
+            <VerticalStackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="Symbol"/>
+                    <Label Grid.Column="1" Text="Net"/>
+                    <Label Grid.Column="2" Text="Bid"/>
+                    <Label Grid.Column="3" Text="Ask"/>
+                </Grid>
+                <CollectionView ItemsSource="{Binding Datas}">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout 
+                            Orientation="Vertical"
+                             Span="1"
+                             VerticalItemSpacing="10" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="{Binding Symbol}"/>
+                                <Label Grid.Column="1" Text="{Binding Net}"/>
+                                <Label Grid.Column="2" Text="{Binding Bid}"/>
+                                <Label Grid.Column="3" Text="{Binding Ask}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label 
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Text="Closing Stock" />
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Text="{Binding SelectedData.ClosingStock}" />
+                        <Label 
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Text="Opening Stock" />
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Text="{Binding SelectedData.OpeningStock}" />
+                        <Label 
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Text="In" />
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Text="{Binding SelectedData.In}" />
+                        <Label 
+                            Grid.Row="3"
+                            Grid.Column="0"
+                            Text="Out" />
+                        <Label
+                            Grid.Row="3"
+                            Grid.Column="1"
+                            Text="{Binding SelectedData.Out}" />
+                        <Label 
+                            Grid.Row="4"
+                            Grid.Column="0"
+                            Text="Net" />
+                        <Label
+                            Grid.Row="4"
+                            Grid.Column="1"
+                            Text="{Binding SelectedData.Net}" />
+                        <Label 
+                            Grid.Row="5"
+                            Grid.Column="0"
+                            Text="Warrants" />
+                        <Label
+                            Grid.Row="5"
+                            Grid.Column="1"
+                            Text="{Binding SelectedData.Warrants}" />
+                        <Label 
+                            Grid.Row="6"
+                            Grid.Column="0"
+                            Text="C Warrants" />
+                        <Label
+                            Grid.Row="6"
+                            Grid.Column="1"
+                            Text="{Binding SelectedData.CWarrants}" />
+                        <Label 
+                            Grid.Row="7"
+                            Grid.Column="0"
+                            Text="C W Ration" />
+                        <Label
+                            Grid.Row="7"
+                            Grid.Column="1"
+                            Text="{Binding SelectedData.CWRation}" />
+                    </Grid>
+                </StackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
     </VerticalStackLayout>
 </ContentPage>

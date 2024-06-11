@@ -1,16 +1,53 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:data="clr-namespace:MauiApp1.TestData"
              x:Class="MauiApp1.Views.Full.FxForwardsPage">
     <VerticalStackLayout>
-        <StackLayout>
-            <Picker />
-            <Switch />
-        </StackLayout>
+        <HorizontalStackLayout>
+            <Grid Padding="20,10,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Picker Grid.Column="0" 
+                        ItemsSource="{Binding CurrencyDatas}" 
+                        SelectedItem="{Binding SelectedItem}" 
+                        ItemDisplayBinding="{Binding Title}"/>
+                <Switch Grid.Column="1" />
+            </Grid>
+        </HorizontalStackLayout>
+        <Grid Padding="20,10,20,0" Margin="0,10,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="70" />
+                <ColumnDefinition Width="70" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0"
+           Text="SymbolName" />
+            <Label Grid.Column="1"
+           Text="ValueDate"/>
+            <Label Grid.Column="2"
+           Text="Bid"
+           HorizontalOptions="Center"/>
+            <Label Grid.Column="3"
+           Text="Ask"
+           HorizontalOptions="Center"/>
+        </Grid>
         <ScrollView Padding="10">
             <CollectionView 
-                ItemsSource="{x:Static data:FullPageData.TestTableData}">
+                ItemsSource="{Binding TableDatas}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"
+                                     Span="1"
+                                     VerticalItemSpacing="10" />
+                </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid Padding="10">

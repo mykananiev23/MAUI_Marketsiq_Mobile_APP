@@ -123,10 +123,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="SampleData\" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <Reference Include="Google.Protobuf">
 	    <HintPath>lib\Google.Protobuf.dll</HintPath>
 	  </Reference>
