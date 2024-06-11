@@ -1,6 +1,7 @@
 ﻿using IdentityModel.OidcClient;
 using MauiApp1.Services;
 using MauiApp1.Views.Market;
+using MauiApp1.Views.Watchlist;
 using Microsoft.Extensions.Logging;
 
 namespace MauiApp1
@@ -37,6 +38,7 @@ namespace MauiApp1
 
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddSingleton<IndicesPage>();
+            builder.Services.AddSingleton<WatchlistPage>();
 
             return builder.Build();
         }

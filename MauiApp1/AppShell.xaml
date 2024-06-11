@@ -6,6 +6,7 @@
     xmlns:local="clr-namespace:MauiApp1"
     xmlns:market="clr-namespace:MauiApp1.Views.Market"
     xmlns:full="clr-namespace:MauiApp1.Views.Full"
+    xmlns:watchlist="clr-namespace:MauiApp1.Views.Watchlist"
     xmlns:view="clr-namespace:MauiApp1.Views"
     xmlns:controls="clr-namespace:MauiApp1.Controls">
 
@@ -52,7 +53,7 @@
              Icon="watchlist.png">      
             <ShellContent Title="Watchlist"
                   Style="{StaticResource DomesticShell}"
-                  ContentTemplate="{DataTemplate view:WatchlistPage}"/>
+                  ContentTemplate="{DataTemplate watchlist:WatchlistPage}"/>
         </Tab>
         <Tab Title="FullPage"
              Route="FullPage"

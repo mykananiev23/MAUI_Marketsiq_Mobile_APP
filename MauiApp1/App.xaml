@@ -10,6 +10,20 @@
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
                 <ResourceDictionary Source="Resources/Styles/CustomStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <DataTemplate x:Key="MarketSearchTemplate" >
+                <Grid Padding="10"
+                      RowDefinitions="Auto,Auto"
+                      ColumnDefinitions="Auto,Auto">
+                    <Label Grid.Column="1"
+                           Text="{Binding Instrument.Name}"
+                           FontAttributes="Bold" />
+                    <Label Grid.Row="1"
+                           Grid.Column="1"
+                           Text="{Binding Instrument.Type}"
+                           FontAttributes="Italic"
+                           VerticalOptions="End" />
+                </Grid>
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

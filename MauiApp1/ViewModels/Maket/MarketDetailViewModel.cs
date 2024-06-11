@@ -11,10 +11,10 @@ namespace MauiApp1.ViewModels.Maket
 {
     class MarketDetailViewModel: IQueryAttributable, INotifyPropertyChanged
     {
-        public ListMainModel SymbolInfo { get; set; }
+        public BaseSymbolModel SymbolInfo { get; set; }
         public void ApplyQueryAttributes(IDictionary<string, object> query)
         {
-            SymbolInfo = query["SymbolInfo"] as ListMainModel;
+            SymbolInfo = query["SymbolInfo"] as BaseSymbolModel;
             OnPropertyChanged("SymbolInfo");
         }
 

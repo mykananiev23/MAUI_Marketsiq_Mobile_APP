@@ -10,7 +10,7 @@ namespace MauiApp1
     public partial class MainPage : ContentPage
     {
         private readonly OidcClient _client = default!;
-        private string _currentAccessToken = "QPoKbMAKRjEEgGtMGzVvDITTGJKcEdYdUSZ80gOR0ho";
+        private string _currentAccessToken = "oK1EOgv5dWABWZ2lFP0OoWylSUYQOb4IP56PNzPv5W0";
         public QApiClient _apiClient;
         public MarketsIQService _connectService;
         public MainPage(OidcClient client, MarketsIQService connectService)
@@ -72,6 +72,11 @@ namespace MauiApp1
                     Label1.Text = $"Id: {qTrade.InstrumentId} Price: {qTrade.Price} Size: {qTrade.Size}";
                 });
             }
+        }
+
+        private async void OnHandleGoToTestPage(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//FullPage/FxForwards");
         }
     }
 }

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MauiApp1.Models.Market
 {
-    public class ListMainModel : INotifyPropertyChanged
+    public class BaseSymbolModel : INotifyPropertyChanged
     {
         private QInstrument instrument;
         private QTradeQuote tradeQuote;

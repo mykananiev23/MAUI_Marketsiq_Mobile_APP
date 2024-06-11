@@ -1,29 +1,41 @@
 ﻿using MauiApp1.Models.Market;
-using Quantower.API.Client.Models;
 
 namespace MauiApp1.Controls
 {
     public class MarketSearchHandler : SearchHandler
     {
-        public List<ListMainModel> ListMainModels { get; set; }
+        public static readonly BindableProperty ListMainModelsProperty =
+        BindableProperty.Create(nameof(ListMainModels), typeof(IList<BaseSymbolModel>), typeof(MarketSearchHandler), default(IList<BaseSymbolModel>));
+        public IList<BaseSymbolModel> ListMainModels
+        {
+            get => (IList<BaseSymbolModel>)GetValue(ListMainModelsProperty);
+            set => SetValue(ListMainModelsProperty, value);
+        }
 
-        //public Type SelectedItemNavigationTarget { get; set; }
+        public Type SelectedItemNavigationTarget { get; set; }
 
-        //protected override void OnQueryChanged(string oldValue, string newValue)
-        //{
-        //    base.OnQueryChanged(oldValue, newValue);
+        protected override void OnQueryChanged(string oldValue, string newValue)
+        {
+            base.OnQueryChanged(oldValue, newValue);
 
-        //    if (string.IsNullOrWhiteSpace(newValue))
-        //    {
-        //        ItemsSource = null;
-        //    }
-        //    else
-        //    {
-        //        ItemsSource = ListMainModels
-        //            .Where(symbol => symbol.Instrument.Name.ToLower().Contains(newValue.ToLower()))
-        //            .ToList<ListMainModel>();
-        //    }
-        //}
+            base.OnQueryChanged(oldValue, newValue);
+
+            if (ListMainModels == null)
+            {
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(newValue))
+            {
+                ItemsSource = null;
+            }
+            else
+            {
+                ItemsSource = ListMainModels
+                    .Where(symbol => symbol.Instrument.Name.ToLower().Contains(newValue.ToLower()))
+                    .ToList();
+            }
+        }
 
         //protected override async void OnItemSelected(object item)
         //{

@@ -4,8 +4,7 @@ using MauiApp1.Services;
 using Quantower.API.Client;
 using Quantower.API.Client.Models;
 using Quantower.API.Client.Models.Quotes;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
+using System.Collections.ObjectModel;
 
 namespace MauiApp1.ViewModels.Maket
 {
@@ -14,7 +13,7 @@ namespace MauiApp1.ViewModels.Maket
         private QInstrument[] Symbols {  get; set; }
         private QApiClient _client;
 
-        public List<ListMainModel> Lists { get; set; } = new List<ListMainModel>();
+        public ObservableCollection<BaseSymbolModel> Lists { get; set; } = new ObservableCollection<BaseSymbolModel>();
 
         public IndicesViewModel(MarketsIQService connectService)
         {
@@ -22,7 +21,7 @@ namespace MauiApp1.ViewModels.Maket
             Symbols = connectService.GetInstruments().Take(2).ToArray();
             foreach (QInstrument instrument in Symbols)
             {
-                Lists.Add(new ListMainModel
+                Lists.Add(new BaseSymbolModel
                 {
                     InstrumentId = instrument.Id,
                     Instrument = instrument,

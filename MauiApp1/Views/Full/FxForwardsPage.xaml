@@ -1,11 +1,42 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:data="clr-namespace:MauiApp1.TestData"
              x:Class="MauiApp1.Views.Full.FxForwardsPage">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <StackLayout>
+            <Picker />
+            <Switch />
+        </StackLayout>
+        <ScrollView Padding="10">
+            <CollectionView 
+                ItemsSource="{x:Static data:FullPageData.TestTableData}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="120" />
+                                <ColumnDefinition Width="120" />
+                                <ColumnDefinition Width="70" />
+                                <ColumnDefinition Width="70" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0"
+                                   Text="{Binding SymbolName}" />
+                            <Label Grid.Column="1"
+                                   Text="{Binding ValueDate}"/>
+                            <Label Grid.Column="2"
+                                   Text="{Binding Bid}"
+                                   HorizontalOptions="Center"/>
+                            <Label Grid.Column="3"
+                                   Text="{Binding Ask}"
+                                   HorizontalOptions="Center"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
     </VerticalStackLayout>
 </ContentPage>

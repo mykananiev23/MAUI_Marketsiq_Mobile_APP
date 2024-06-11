@@ -15,7 +15,7 @@ public partial class IndicesPage : ContentPage
 
 	private async void OnHandleMoveDetailPage(object sender, SelectionChangedEventArgs e)
 	{
-        ListMainModel symbolfeed = e.CurrentSelection.FirstOrDefault() as ListMainModel;
+        BaseSymbolModel symbolfeed = e.CurrentSelection.FirstOrDefault() as BaseSymbolModel;
 
 		var navigationParameters = new Dictionary<string, object>
 		{
