@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.Views.Market.MarketDetail"
              Title="{Binding SymbolInfo.Instrument.Name}">
+
     <VerticalStackLayout>
         <Label 
             Text="{Binding SymbolInfo.TradeQuote.Price}"

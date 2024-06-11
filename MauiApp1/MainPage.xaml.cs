@@ -11,6 +11,7 @@ namespace MauiApp1
     {
         private readonly OidcClient _client = default!;
         private string _currentAccessToken = "-fYBEK5vAR5AqHp9LVOlvnxYYNUuY-vvyXdKlf88YwY";
+
         public QApiClient _apiClient;
         public MarketsIQService _connectService;
         public MainPage(OidcClient client, MarketsIQService connectService)
