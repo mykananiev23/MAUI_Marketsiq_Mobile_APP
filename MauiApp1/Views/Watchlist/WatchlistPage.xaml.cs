@@ -10,7 +10,7 @@ public partial class WatchlistPage : ContentPage
 	{
 		InitializeComponent();
 
-		BindingContext=new WatchlistViewModel(connectionService);
+		BindingContext=new WatchlistViewModel();
 	}
 
 	private async void OnHandlerChangeWatchlist(object sender, SelectionChangedEventArgs e)

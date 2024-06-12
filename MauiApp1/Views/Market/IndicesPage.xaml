@@ -4,7 +4,7 @@
              xmlns:include="clr-namespace:MauiApp1.Views.Include"
              xmlns:controls="clr-namespace:MauiApp1.Controls"
              x:Class="MauiApp1.Views.Market.IndicesPage">
-    <Shell.SearchHandler>
+    <!--<Shell.SearchHandler>
         <controls:MarketSearchHandler ItemTemplate="{StaticResource MarketSearchTemplate}"  ListMainModels="{Binding Lists}" Placeholder="Please Enter term" />
     </Shell.SearchHandler>
     <ScrollView Padding="10">
@@ -24,5 +24,5 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-    </ScrollView>
+    </ScrollView>-->
 </ContentPage>

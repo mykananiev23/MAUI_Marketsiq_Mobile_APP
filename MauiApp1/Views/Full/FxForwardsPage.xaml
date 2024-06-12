@@ -3,23 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.Views.Full.FxForwardsPage">
     <VerticalStackLayout>
-        <HorizontalStackLayout>
+        <StackLayout>
             <Grid Padding="20,10,20,0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="150" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Picker Grid.Column="0" 
                         ItemsSource="{Binding CurrencyDatas}" 
                         SelectedItem="{Binding SelectedItem}" 
                         ItemDisplayBinding="{Binding Title}"/>
-                <Switch Grid.Column="1" />
+                <Switch Grid.Column="1"/>
             </Grid>
-        </HorizontalStackLayout>
-        <Grid Padding="20,10,20,0" Margin="0,10,0,0">
+        </StackLayout>
+        <Grid Padding="20,10,20,0" Margin="0,10,0,10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
@@ -30,17 +30,18 @@
                 <ColumnDefinition Width="50" />
             </Grid.ColumnDefinitions>
             <Label Grid.Column="0"
-           Text="SymbolName" />
+                   Text="SymbolName" />
             <Label Grid.Column="1"
-           Text="ValueDate"/>
+                   Text="ValueDate"
+                   HorizontalOptions="Center"/>
             <Label Grid.Column="2"
-           Text="Bid"
-           HorizontalOptions="Center"/>
+                   Text="Bid"
+                   HorizontalOptions="Center"/>
             <Label Grid.Column="3"
-               Text="Ask"
-               HorizontalOptions="End"/>
+                   Text="Ask"
+                   HorizontalOptions="End"/>
         </Grid>
-        <ScrollView Padding="10">
+        <ScrollView>
             <CollectionView 
                 ItemsSource="{Binding TableDatas}">
                 <CollectionView.ItemsLayout>
@@ -50,27 +51,32 @@
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Grid Padding="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="120" />
-                                <ColumnDefinition Width="120" />
-                                <ColumnDefinition Width="70" />
-                                <ColumnDefinition Width="70" />
-                            </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0"
-                                   Text="{Binding SymbolName}" />
-                            <Label Grid.Column="1"
-                                   Text="{Binding ValueDate}"/>
-                            <Label Grid.Column="2"
-                                   Text="{Binding Bid}"
-                                   HorizontalOptions="Center"/>
-                            <Label Grid.Column="3"
-                                   Text="{Binding Ask}"
-                                   HorizontalOptions="Center"/>
-                        </Grid>
+                        <Border Stroke="#C49B33"
+                                Padding="5"
+                                StrokeThickness="4">
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120" />
+                                    <ColumnDefinition Width="120" />
+                                    <ColumnDefinition Width="70" />
+                                    <ColumnDefinition Width="50" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0"
+                                       Text="{Binding SymbolName}" />
+                                <Label Grid.Column="1"
+                                       Text="{Binding ValueDate}"
+                                       HorizontalOptions="Center"/>
+                                <Label Grid.Column="2"
+                                       Text="{Binding Bid}"
+                                       HorizontalOptions="Center"/>
+                                <Label Grid.Column="3"
+                                       Text="{Binding Ask}"
+                                       HorizontalOptions="End"/>
+                            </Grid>
+                        </Border>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>

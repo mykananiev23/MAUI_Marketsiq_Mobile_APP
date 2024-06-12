@@ -28,7 +28,7 @@
                     <RoundRectangle CornerRadius="20,0,0,20" />
                 </Border.StrokeShape>
                 <Picker Title="Select a Watchlist" 
-                    ItemsSource="{Binding Watchlists}" 
+                    ItemsSource="{Binding Datas}" 
                     ItemDisplayBinding="{Binding Title}"
                     SelectedItem="{Binding SelectedItem}"
                     Style="{StaticResource BeautifulPickerStyle}"
@@ -45,19 +45,52 @@
                          HeightRequest="40"/>
         </HorizontalStackLayout>
         <ScrollView Padding="0,10,0,0">
-            <CollectionView 
-                Style="{StaticResource CollectionViewStyle}"
-                ItemsSource="{Binding SelectedItem.Symbols}"
-                SelectionMode="Single"
-                SelectionChanged="OnHandleMoveDetailPage">
-                <CollectionView.ItemsLayout>
-                    <GridItemsLayout Orientation="Vertical"
-                 Span="1"
-                 VerticalItemSpacing="10" />
-                </CollectionView.ItemsLayout>
+            <CollectionView ItemsSource="{Binding SelectedItem.Symbols}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <include:WatchlistDetailSymbolView />
+                        <Border Stroke="#C49B33"
+                                StrokeThickness="2"
+                                StrokeShape="RoundRectangle 0,0,0,0">
+                            <Grid Padding="10,10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="160" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding Description}" />
+                                <Label Grid.Row="0" Grid.Column="1" HorizontalOptions="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="B " />
+                                            <Span Text="{Binding BidPrice}" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                                <Label Grid.Row="0" Grid.Column="2" HorizontalOptions="End">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="A " />
+                                            <Span Text="{Binding AskPrice}" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                                <Label Grid.Row="1" Grid.Column="0">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{Binding Time}" />
+                                            <Span Text=" | " />
+                                            <Span Text="{Binding Type}" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding BidVolumn}" HorizontalOptions="Center" />
+                                <Label Grid.Row="1" Grid.Column="2" Text="{Binding AskVolumn}" HorizontalOptions="End" />
+                            </Grid>
+                        </Border>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>

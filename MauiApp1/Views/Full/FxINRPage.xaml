@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.Views.Full.FxINRPage">
-    <VerticalStackLayout>
-        <Grid>
+    <VerticalStackLayout Padding="10">
+        <Grid Padding="20,10,20,0" Margin="0,10,0,10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
@@ -14,13 +14,16 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Label Grid.Column="0"
-                Text="Symbol" />
+                   Text="Symbol"/>
             <Label Grid.Column="1"
-                Text="ValueDate"/>
+                   Text="ValueDate"
+                   HorizontalOptions="End"/>
             <Label Grid.Column="2"
-                Text="Bid"/>
+                   Text="Bid"
+                   HorizontalOptions="End"/>
             <Label Grid.Column="3"
-                Text="Ask"/>
+                   Text="Ask"
+                   HorizontalOptions="End"/>
         </Grid>
         <ScrollView>
             <CollectionView ItemsSource="{Binding Datas}">
@@ -32,25 +35,32 @@
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0"
-                                   Text="{Binding Symbol}" />
-                            <Label Grid.Column="1"
-                                   Text="{Binding ValueDate}"/>
-                            <Label Grid.Column="2"
-                                   Text="{Binding Bid}"/>
-                            <Label Grid.Column="3"
-                                   Text="{Binding Ask}"/>
-                        </Grid>
+                        <Border Stroke="#C49B33"
+                                Padding="5"
+                                StrokeThickness="4">
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0"
+                                       Text="{Binding Symbol}" />
+                                <Label Grid.Column="1"
+                                       Text="{Binding ValueDate}"
+                                       HorizontalOptions="End"/>
+                                <Label Grid.Column="2"
+                                       Text="{Binding Bid}"
+                                       HorizontalOptions="End"/>
+                                <Label Grid.Column="3"
+                                       Text="{Binding Ask}"
+                                       HorizontalOptions="End"/>
+                            </Grid>
+                        </Border>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>

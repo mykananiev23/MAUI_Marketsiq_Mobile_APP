@@ -10,16 +10,5 @@ namespace MauiApp1.Models
         public string Title { get; set; }
 
         public List<BaseSymbolModel> Symbols { get; set; }
-
-        //public List<Instrument> InstrumentsInfo
-        //{
-        //    get => _instrumentsInfo;
-        //    set => _instrumentsInfo = value ?? new List<Instrument>(); // Ensure non-null value
-        //}
-
-        //public WatchlistModel()
-        //{
-        //    _instrumentsInfo = new List<Instrument>();
-        //}
     }
 }
