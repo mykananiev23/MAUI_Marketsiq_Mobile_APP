@@ -23,5 +23,6 @@ public partial class IndicesPage : ContentPage
 		};
 
 		await Shell.Current.GoToAsync($"MarketDetail", navigationParameters);
+
     }
 }

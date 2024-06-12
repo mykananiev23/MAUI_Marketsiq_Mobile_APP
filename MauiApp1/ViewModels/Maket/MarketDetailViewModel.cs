@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 
 namespace MauiApp1.ViewModels.Maket
 {
+
     class MarketDetailViewModel: IQueryAttributable, INotifyPropertyChanged
     {
         public BaseSymbolModel SymbolInfo { get; set; }
         public void ApplyQueryAttributes(IDictionary<string, object> query)
         {
             SymbolInfo = query["SymbolInfo"] as BaseSymbolModel;
+
             OnPropertyChanged("SymbolInfo");
         }
 
@@ -30,3 +32,4 @@ namespace MauiApp1.ViewModels.Maket
         }
     }
 }
+
