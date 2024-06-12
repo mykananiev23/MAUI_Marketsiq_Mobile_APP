@@ -3,7 +3,7 @@ using MarketsIQ.Models.Watchlist;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace MauiApp1.ViewModels
+namespace MarketsIQ.ViewModels
 {
     class WatchlistViewModel: INotifyPropertyChanged
     {
@@ -40,16 +40,16 @@ namespace MauiApp1.ViewModels
     }
 }
 #region Old Script
-//using MauiApp1.Models;
-//using MauiApp1.Models.Market;
-//using MauiApp1.Services;
+//using MarketsIQ.Models;
+//using MarketsIQ.Models.Market;
+//using MarketsIQ.Services;
 //using Quantower.API.Client;
 //using Quantower.API.Client.Models;
 //using Quantower.API.Client.Models.Quotes;
 //using System.ComponentModel;
 //using System.Runtime.CompilerServices;
 
-//namespace MauiApp1.ViewModels
+//namespace MarketsIQ.ViewModels
 //{
 //    class WatchlistViewModel: INotifyPropertyChanged
 //    {

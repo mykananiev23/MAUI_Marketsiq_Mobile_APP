@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MauiApp1.ViewModels.Include
+namespace MarketsIQ.ViewModels.Include
 {
     public class InstrumentViewModel : INotifyPropertyChanged
     {

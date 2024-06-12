@@ -1,6 +1,6 @@
-﻿using MauiApp1.Models.Market;
+﻿using MarketsIQ.Models.Market;
 
-namespace MauiApp1.Controls
+namespace MarketsIQ.Controls
 {
     public class MarketSearchHandler : SearchHandler
     {

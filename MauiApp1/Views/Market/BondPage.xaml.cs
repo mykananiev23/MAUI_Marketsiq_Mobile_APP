@@ -1,7 +1,7 @@
 using MarketsIQ.ViewModels.Maket;
 using SkiaSharp;
 
-namespace MauiApp1.Views.Market;
+namespace MarketsIQ.Views.Market;
 
 public partial class BondPage : ContentPage
 {

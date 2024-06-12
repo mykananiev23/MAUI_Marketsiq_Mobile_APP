@@ -1,6 +1,6 @@
-using MauiApp1.ViewModels.Full;
+using MarketsIQ.ViewModels.Full;
 
-namespace MauiApp1.Views.Full;
+namespace MarketsIQ.Views.Full;
 
 public partial class LMEPage : ContentPage
 {

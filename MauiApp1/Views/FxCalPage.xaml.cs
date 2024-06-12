@@ -1,4 +1,4 @@
-namespace MauiApp1.Views;
+namespace MarketsIQ.Views;
 
 public partial class FxCalPage : ContentPage
 {

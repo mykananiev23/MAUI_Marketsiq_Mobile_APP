@@ -1,10 +1,10 @@
 ﻿using IdentityModel.OidcClient;
-using MauiApp1.Services;
-using MauiApp1.Views.Market;
-using MauiApp1.Views.Watchlist;
+using MarketsIQ.Services;
+using MarketsIQ.Views.Market;
+using MarketsIQ.Views.Watchlist;
 using Microsoft.Extensions.Logging;
 
-namespace MauiApp1
+namespace MarketsIQ
 {
     public static class MauiProgram
     {

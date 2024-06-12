@@ -1,4 +1,4 @@
-﻿namespace MauiApp1
+﻿namespace MarketsIQ
 {
     public partial class App : Application
     {

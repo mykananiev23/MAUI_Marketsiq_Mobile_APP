@@ -1,6 +1,6 @@
-﻿using MauiApp1.Views.Market;
+﻿using MarketsIQ.Views.Market;
 
-namespace MauiApp1
+namespace MarketsIQ
 {
     public partial class AppShell : Shell
     {

@@ -1,6 +1,6 @@
 ﻿using Quantower.API.Client.Models;
 
-namespace MauiApp1.Data
+namespace MarketsIQ.Data
 {
     public class MarketIndicesSymbolData
     {

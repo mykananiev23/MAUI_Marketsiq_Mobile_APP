@@ -1,6 +1,6 @@
-﻿using MauiApp1.Models.Full;
+﻿using MarketsIQ.Models.Full;
 
-namespace MauiApp1.Data
+namespace MarketsIQ.Data
 {
     public class CurrencyData
     {

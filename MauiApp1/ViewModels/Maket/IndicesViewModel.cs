@@ -1,11 +1,11 @@
-﻿using MauiApp1.Models.Market;
-using MauiApp1.Services;
+﻿using MarketsIQ.Models.Market;
+using MarketsIQ.Services;
 using Quantower.API.Client;
 using Quantower.API.Client.Models;
 using Quantower.API.Client.Models.Quotes;
 using System.Collections.ObjectModel;
 
-namespace MauiApp1.ViewModels.Maket
+namespace MarketsIQ.ViewModels.Maket
 {
     class IndicesViewModel
     {

@@ -1,4 +1,4 @@
-namespace MauiApp1.Views.Include;
+namespace MarketsIQ.Views.Include;
 
 public partial class MarketSymbolQuoteView : ContentView
 {

@@ -3,9 +3,9 @@ using Quantower.API.Client;
 using Quantower.API.Client.Models;
 using System.Text;
 using IdentityModel.OidcClient;
-using MauiApp1.Services;
+using MarketsIQ.Services;
 
-namespace MauiApp1
+namespace MarketsIQ
 {
     public partial class MainPage : ContentPage
     {

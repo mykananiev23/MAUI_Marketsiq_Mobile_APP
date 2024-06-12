@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MauiApp1.Models.Market
+namespace MarketsIQ.Models.Market
 {
     public class BaseSymbolModel : INotifyPropertyChanged
     {

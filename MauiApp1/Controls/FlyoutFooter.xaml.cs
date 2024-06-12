@@ -1,4 +1,4 @@
-namespace MauiApp1.Controls;
+namespace MarketsIQ.Controls;
 
 public partial class FlyoutFooter : ContentView
 {

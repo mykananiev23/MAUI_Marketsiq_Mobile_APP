@@ -1,4 +1,4 @@
-namespace MauiApp1.Views.Watchlist;
+namespace MarketsIQ.Views.Watchlist;
 
 public partial class NewWatchlistPage : ContentPage
 {

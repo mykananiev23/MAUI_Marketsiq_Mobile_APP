@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-    x:Class="MauiApp1.AppShell"
+    x:Class="MarketsIQ.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MauiApp1"
-    xmlns:market="clr-namespace:MauiApp1.Views.Market"
-    xmlns:full="clr-namespace:MauiApp1.Views.Full"
-    xmlns:watchlist="clr-namespace:MauiApp1.Views.Watchlist"
-    xmlns:view="clr-namespace:MauiApp1.Views"
-    xmlns:controls="clr-namespace:MauiApp1.Controls">
+    xmlns:local="clr-namespace:MarketsIQ"
+    xmlns:market="clr-namespace:MarketsIQ.Views.Market"
+    xmlns:full="clr-namespace:MarketsIQ.Views.Full"
+    xmlns:watchlist="clr-namespace:MarketsIQ.Views.Watchlist"
+    xmlns:view="clr-namespace:MarketsIQ.Views"
+    xmlns:controls="clr-namespace:MarketsIQ.Controls">
 
     <Shell.FlyoutHeader>
         <controls:FlyoutHeader></controls:FlyoutHeader>

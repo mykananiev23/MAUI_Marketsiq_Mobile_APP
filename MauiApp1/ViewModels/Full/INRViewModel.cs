@@ -1,7 +1,7 @@
-﻿using MauiApp1.Data;
-using MauiApp1.Models.Full;
+﻿using MarketsIQ.Data;
+using MarketsIQ.Models.Full;
 
-namespace MauiApp1.ViewModels.Full
+namespace MarketsIQ.ViewModels.Full
 {
     class INRViewModel
     {

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:include="clr-namespace:MauiApp1.Views.Include"
-             xmlns:controls="clr-namespace:MauiApp1.Controls"
-             x:Class="MauiApp1.Views.Market.IndicesPage">
+             xmlns:include="clr-namespace:MarketsIQ.Views.Include"
+             xmlns:controls="clr-namespace:MarketsIQ.Controls"
+             x:Class="MarketsIQ.Views.Market.IndicesPage">
     <!--<Shell.SearchHandler>
         <controls:MarketSearchHandler ItemTemplate="{StaticResource MarketSearchTemplate}"  ListMainModels="{Binding Lists}" Placeholder="Please Enter term" />
     </Shell.SearchHandler>

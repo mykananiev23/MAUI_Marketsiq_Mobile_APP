@@ -1,6 +1,6 @@
-using MauiApp1.ViewModels.Maket;
+using MarketsIQ.ViewModels.Maket;
 
-namespace MauiApp1.Views.Market;
+namespace MarketsIQ.Views.Market;
 
 public partial class MarketDetail : ContentPage
 {

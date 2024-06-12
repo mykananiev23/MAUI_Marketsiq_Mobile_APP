@@ -1,7 +1,7 @@
 ﻿using IdentityModel.Client;
 using IdentityModel.OidcClient.Browser;
 
-namespace MauiApp1;
+namespace MarketsIQ;
 
 public class LoginOAuthBrowser : IdentityModel.OidcClient.Browser.IBrowser
 {

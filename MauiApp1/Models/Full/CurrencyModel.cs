@@ -1,4 +1,4 @@
-﻿namespace MauiApp1.Models.Full
+﻿namespace MarketsIQ.Models.Full
 {
     public class CurrencyModel
     {

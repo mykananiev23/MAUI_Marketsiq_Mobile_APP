@@ -1,12 +1,11 @@
-﻿using AndroidX.AppCompat.View.Menu;
-using MauiApp1.Models.Full;
+﻿using MarketsIQ.Models.Full;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MauiApp1.Data
+namespace MarketsIQ.Data
 {
     public class CopperData
     {
