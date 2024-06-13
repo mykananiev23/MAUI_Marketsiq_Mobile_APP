@@ -125,23 +125,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Reference Include="Google.Protobuf">
-	    <HintPath>lib\Google.Protobuf.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Protocol.Protobuf.Client">
-	    <HintPath>lib\Protocol.Protobuf.Client.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Protocol.Protobuf.Shared">
-	    <HintPath>lib\Protocol.Protobuf.Shared.dll</HintPath>
-	  </Reference>
-	  <Reference Include="QuantowerAPIClient">
-	    <HintPath>lib\QuantowerAPIClient.dll</HintPath>
-	  </Reference>
-	  <Reference Include="ResponseWaiter">
-	    <HintPath>lib\ResponseWaiter.dll</HintPath>
-	  </Reference>
-	  <Reference Include="ServerStreamModule">
-	    <HintPath>lib\ServerStreamModule.dll</HintPath>
-	  </Reference>
+	  <Folder Include="Services\QuantowerServer\Protocol\Shared\Models\" />
 	</ItemGroup>
 </Project>
