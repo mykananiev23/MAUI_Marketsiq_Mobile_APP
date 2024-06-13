@@ -1,4 +1,8 @@
 ﻿using System.Diagnostics;
+using Google.Protobuf;
+using Google.Protobuf.Collections;
+using Google.Protobuf.Reflection;
+using MarketsIQ.Services.QuantowerServer.Protocol.Shared.Models;
 
 namespace MarketsIQ.Services.QuantowerServer.Protocol.Client.Models
 {

@@ -1,9 +1,9 @@
-﻿using Quantower.API.Client.Models.Quotes;
-using Quantower.API.Client;
-using Quantower.API.Client.Models;
-using System.Text;
+﻿using System.Text;
 using IdentityModel.OidcClient;
 using MarketsIQ.Services;
+using MarketsIQ.Services.Quantower.API.Client;
+using MarketsIQ.Services.Quantower.API.Client.Models;
+using MarketsIQ.Services.Quantower.API.Client.Models.Quotes;
 
 namespace MarketsIQ
 {

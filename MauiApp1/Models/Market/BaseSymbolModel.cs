@@ -1,12 +1,7 @@
-﻿using Quantower.API.Client.Models;
-using Quantower.API.Client.Models.Quotes;
-using System;
-using System.Collections.Generic;
+﻿using MarketsIQ.Services.Quantower.API.Client.Models;
+using MarketsIQ.Services.Quantower.API.Client.Models.Quotes;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MarketsIQ.Models.Market
 {

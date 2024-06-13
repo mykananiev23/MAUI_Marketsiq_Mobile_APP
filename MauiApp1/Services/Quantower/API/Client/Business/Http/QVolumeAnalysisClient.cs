@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Globalization;
+using MarketsIQ.Services.Quantower.API.Client.Models;
+using MarketsIQ.Services.Quantower.API.Client.Models.VolumeAnalysis;
 
 namespace MarketsIQ.Services.Quantower.API.Client.Business.Http
 {

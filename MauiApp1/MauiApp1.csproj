@@ -49,6 +49,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Google.Protobuf" Version="3.27.1" />
 		<PackageReference Include="IdentityModel" Version="6.0.0" />
 		<PackageReference Include="IdentityModel.OidcClient" Version="5.2.1" />
 		<PackageReference Include="LiveChartsCore.SkiaSharpView.Maui" Version="2.0.0-rc2" />
@@ -122,9 +123,5 @@
 
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Services\QuantowerServer\Protocol\Shared\Models\" />
 	</ItemGroup>
 </Project>

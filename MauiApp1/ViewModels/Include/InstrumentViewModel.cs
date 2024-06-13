@@ -1,10 +1,5 @@
-﻿using Quantower.API.Client.Models;
-using System;
-using System.Collections.Generic;
+﻿using MarketsIQ.Services.Quantower.API.Client.Models;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MarketsIQ.ViewModels.Include
 {

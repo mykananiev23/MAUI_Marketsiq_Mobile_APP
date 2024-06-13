@@ -1,4 +1,9 @@
-﻿namespace MarketsIQ.Services.Quantower.API.Client.Business.Sockets
+﻿using MarketsIQ.Services.Quantower.API.Client.Models;
+using MarketsIQ.Services.Quantower.API.Client.Models.Quotes;
+using MarketsIQ.Services.QuantowerServer.Protocol.Client.Models;
+using MarketsIQ.Services.QuantowerServer.Protocol.Shared.Models;
+
+namespace MarketsIQ.Services.Quantower.API.Client.Business.Sockets
 {
     public class QQuotesClient : QSocketClient
     {

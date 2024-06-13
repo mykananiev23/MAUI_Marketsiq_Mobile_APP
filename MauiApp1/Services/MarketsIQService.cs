@@ -1,11 +1,5 @@
-﻿using IdentityModel.OidcClient;
-using Quantower.API.Client;
-using Quantower.API.Client.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MarketsIQ.Services.Quantower.API.Client;
+using MarketsIQ.Services.Quantower.API.Client.Models;
 
 namespace MarketsIQ.Services
 {

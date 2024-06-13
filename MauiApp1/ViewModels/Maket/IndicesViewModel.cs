@@ -1,8 +1,8 @@
 ﻿using MarketsIQ.Models.Market;
 using MarketsIQ.Services;
-using Quantower.API.Client;
-using Quantower.API.Client.Models;
-using Quantower.API.Client.Models.Quotes;
+using MarketsIQ.Services.Quantower.API.Client;
+using MarketsIQ.Services.Quantower.API.Client.Models;
+using MarketsIQ.Services.Quantower.API.Client.Models.Quotes;
 using System.Collections.ObjectModel;
 
 namespace MarketsIQ.ViewModels.Maket

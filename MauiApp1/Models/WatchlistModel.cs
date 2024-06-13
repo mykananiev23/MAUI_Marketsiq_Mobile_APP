@@ -1,5 +1,4 @@
 ﻿using MarketsIQ.Models.Market;
-using System.Diagnostics.Metrics;
 
 namespace MarketsIQ.Models
 {

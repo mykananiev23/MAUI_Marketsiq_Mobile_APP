@@ -1,4 +1,4 @@
-﻿using Quantower.API.Client.Models;
+﻿using MarketsIQ.Services.Quantower.API.Client.Models;
 
 namespace MarketsIQ.Data
 {

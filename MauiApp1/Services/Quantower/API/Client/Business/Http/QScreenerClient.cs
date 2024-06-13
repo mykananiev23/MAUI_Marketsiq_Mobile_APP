@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
+using Newtonsoft.Json;
+using MarketsIQ.Services.Quantower.API.Client.Models;
+using MarketsIQ.Services.Quantower.API.Client.Models.ScreenerOperands;
 
 namespace MarketsIQ.Services.Quantower.API.Client.Business.Http
 {

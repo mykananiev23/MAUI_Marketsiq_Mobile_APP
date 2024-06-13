@@ -1,7 +1,14 @@
 ﻿using System.Diagnostics;
-using System.Net.Sockets;
 using System.Net;
+using System.Net.Sockets;
+using MarketsIQ.Services.Quantower.API.Client.Models;
 using MarketsIQ.Services.Quantower.Utilities.ResponseWaiter;
+using MarketsIQ.Services.QuantowerServer.Modules.ServerStream;
+using MarketsIQ.Services.QuantowerServer.Modules.ServerStream.PacketSeparators;
+using MarketsIQ.Services.QuantowerServer.Modules.ServerStream.Sockets;
+using MarketsIQ.Services.QuantowerServer.Protocol.Client;
+using MarketsIQ.Services.QuantowerServer.Protocol.Client.Models;
+using MarketsIQ.Services.QuantowerServer.Protocol.Shared;
 
 namespace MarketsIQ.Services.Quantower.API.Client.Business.Sockets
 {

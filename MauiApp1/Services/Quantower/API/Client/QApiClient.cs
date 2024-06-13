@@ -1,5 +1,8 @@
-﻿using System.Net.Sockets;
-using System.Net;
+﻿using System.Net;
+using System.Net.Sockets;
+using MarketsIQ.Services.Quantower.API.Client.Business.Http;
+using MarketsIQ.Services.Quantower.API.Client.Business.Sockets;
+using MarketsIQ.Services.Quantower.API.Client.Models;
 
 namespace MarketsIQ.Services.Quantower.API.Client
 {
