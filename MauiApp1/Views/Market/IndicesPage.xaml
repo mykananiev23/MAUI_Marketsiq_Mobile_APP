@@ -4,25 +4,20 @@
              xmlns:include="clr-namespace:MarketsIQ.Views.Include"
              xmlns:controls="clr-namespace:MarketsIQ.Controls"
              x:Class="MarketsIQ.Views.Market.IndicesPage">
-    <!--<Shell.SearchHandler>
+    <Shell.SearchHandler>
         <controls:MarketSearchHandler ItemTemplate="{StaticResource MarketSearchTemplate}"  ListMainModels="{Binding Lists}" Placeholder="Please Enter term" />
     </Shell.SearchHandler>
-    <ScrollView Padding="10">
+    <ScrollView  Padding="10,10">
         <CollectionView 
             Style="{StaticResource CollectionViewStyle}"
             ItemsSource="{Binding Lists}"
             SelectionMode="Single"
             SelectionChanged="OnHandleMoveDetailPage">
-            <CollectionView.ItemsLayout>
-                <GridItemsLayout Orientation="Vertical"
-                         Span="1"
-                         VerticalItemSpacing="10" />
-            </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <include:MarketSymbolQuoteView />
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-    </ScrollView>-->
+    </ScrollView>
 </ContentPage>

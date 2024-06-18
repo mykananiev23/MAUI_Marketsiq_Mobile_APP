@@ -9,15 +9,16 @@ namespace MarketsIQ.ViewModels.Maket
 {
     class IndicesViewModel
     {
-        private QInstrument[] Symbols {  get; set; }
+        private IList<QInstrument> Symbols {  get; set; }
         private QApiClient _client;
 
         public ObservableCollection<BaseSymbolModel> Lists { get; set; } = new ObservableCollection<BaseSymbolModel>();
 
         public IndicesViewModel(MarketsIQService connectService)
         {
-            _client = connectService.GetApiClient();
-            Symbols = connectService.GetInstruments().Take(2).ToArray();
+            Symbols = MarketsIQService.Instruments.Take(2).ToList();
+            _client = MarketsIQService.qApiClient;
+
             foreach (QInstrument instrument in Symbols)
             {
                 Lists.Add(new BaseSymbolModel

@@ -7,7 +7,7 @@ namespace MarketsIQ.Services
     {
         public static QApiClient qApiClient;
 
-        public static QInstrument[] instruments;
+        public static QInstrument[] Instruments;
 
         public void InintConnectService(string accessToken)
         {
@@ -27,17 +27,12 @@ namespace MarketsIQ.Services
             CancellationToken token = new CancellationToken();
             qApiClient.Connect(token);
 
-            instruments = qApiClient.Instruments.GetInstruments(token).Value;
+            Instruments = qApiClient.Instruments.GetInstruments(token).Value;
         }
 
         public QApiClient GetApiClient()
         {
             return qApiClient;
-        }
-
-        public QInstrument[] GetInstruments()
-        {
-            return instruments;
         }
     }
 }

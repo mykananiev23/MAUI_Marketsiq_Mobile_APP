@@ -39,11 +39,11 @@
                 Clicked="OnHandleConnectionTest"
                 HorizontalOptions="Fill" />
 
-            <Button
+            <!--<Button
                 Text="GotoTestPage"
                 BackgroundColor="{StaticResource Primary}"
                 Clicked="OnHandleGoToTestPage"
-                HorizontalOptions="Fill" />
+                HorizontalOptions="Fill" />-->
         </VerticalStackLayout>
     </HorizontalStackLayout>
 </ContentPage>

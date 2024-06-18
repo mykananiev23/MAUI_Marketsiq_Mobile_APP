@@ -1,5 +1,7 @@
 ﻿using MarketsIQ.Data;
 using MarketsIQ.Models.Watchlist;
+using MarketsIQ.Services;
+using MarketsIQ.Services.Quantower.API.Client.Models;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
@@ -8,7 +10,8 @@ namespace MarketsIQ.ViewModels
     class WatchlistViewModel: INotifyPropertyChanged
     {
         private MainModel _selectedItem;
-        public IList<MainModel> Datas { get; set; }
+        public List<QInstrument> InstrumentsList { get; set; }
+        public IList<MainModel> Watchlists { get; set; }
 
         public MainModel SelectedItem
         {
@@ -26,9 +29,9 @@ namespace MarketsIQ.ViewModels
 
         public WatchlistViewModel()
         {
-            Datas = WatchlistData.Watchlists;
+            Watchlists = WatchlistData.Watchlists;
 
-            SelectedItem = Datas.FirstOrDefault();
+            SelectedItem = Watchlists.FirstOrDefault();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

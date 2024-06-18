@@ -16,7 +16,6 @@
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.marketsiq</ApplicationId>
-		<ApplicationIdGuid>d93828b5-47e7-458b-9923-34d2033e6185</ApplicationIdGuid>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
@@ -120,8 +119,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Watchlist\WatchlistPage.xaml">
-
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="ViewModels\Watchlist\" />
+	</ItemGroup>
+
 </Project>

@@ -10,7 +10,7 @@ namespace MarketsIQ
     public partial class MainPage : ContentPage
     {
         private readonly OidcClient _client = default!;
-        private string _currentAccessToken = "-fYBEK5vAR5AqHp9LVOlvnxYYNUuY-vvyXdKlf88YwY";
+        private string _currentAccessToken = "Hm6RLP-d9EFDVI-edCfOKTQ8Rbg14nL7XjByuiruHiM";
 
         public QApiClient _apiClient;
         public MarketsIQService _connectService;
@@ -62,17 +62,6 @@ namespace MarketsIQ
         {
             _connectService.InintConnectService(_currentAccessToken);
             await Shell.Current.GoToAsync("//Market/Indices");
-        }
-
-        private void Quotes_MarketQuoteReceived(object sender, QEventArgs e)
-        {
-            if (e.MarketData is QTradeQuote qTrade)
-            {
-                MainThread.BeginInvokeOnMainThread(() =>
-                {
-                    Label1.Text = $"Id: {qTrade.InstrumentId} Price: {qTrade.Price} Size: {qTrade.Size}";
-                });
-            }
         }
 
         private async void OnHandleGoToTestPage(object sender, EventArgs e)

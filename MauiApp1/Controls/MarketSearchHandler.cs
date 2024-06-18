@@ -18,8 +18,6 @@ namespace MarketsIQ.Controls
         {
             base.OnQueryChanged(oldValue, newValue);
 
-            base.OnQueryChanged(oldValue, newValue);
-
             if (ListMainModels == null)
             {
                 return;

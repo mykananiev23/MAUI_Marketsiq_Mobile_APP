@@ -20,10 +20,11 @@ namespace MarketsIQ
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
-            //builder.Services.AddSingleton(new OidcClient(new()
+            //builder.Services
+            //.AddSingleton(new OidcClient(new()
             //{
             //    Authority = "https://demo.duendesoftware.com",
 

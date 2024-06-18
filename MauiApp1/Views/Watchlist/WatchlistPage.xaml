@@ -2,8 +2,12 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:include="clr-namespace:MarketsIQ.Views.Include"
+             xmlns:controls="clr-namespace:MarketsIQ.Controls"
              x:Class="MarketsIQ.Views.Watchlist.WatchlistPage"
              Title="WatchlistPage">
+    <Shell.SearchHandler>
+        <controls:WatchlistSearchHandler ItemTemplate="{StaticResource WatchlistSearchTemplate}" ListMainModels="{Binding SelectedItem.Symbols}" />
+    </Shell.SearchHandler>
     <ContentPage.Resources>
         <Style TargetType="Picker" x:Key="BeautifulPickerStyle">
             <Setter Property="TextColor" Value="White" />
@@ -28,7 +32,7 @@
                     <RoundRectangle CornerRadius="20,0,0,20" />
                 </Border.StrokeShape>
                 <Picker Title="Select a Watchlist" 
-                    ItemsSource="{Binding Datas}" 
+                    ItemsSource="{Binding Watchlists}" 
                     ItemDisplayBinding="{Binding Title}"
                     SelectedItem="{Binding SelectedItem}"
                     Style="{StaticResource BeautifulPickerStyle}"
@@ -57,12 +61,12 @@
                                     <RowDefinition Height="*" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="160" />
+                                    <ColumnDefinition Width="200" />
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
                                 <Label Grid.Row="0" Grid.Column="0" Text="{Binding Description}" />
-                                <Label Grid.Row="0" Grid.Column="1" HorizontalOptions="Center">
+                                <Label Grid.Row="0" Grid.Column="1" HorizontalOptions="End">
                                     <Label.FormattedText>
                                         <FormattedString>
                                             <Span Text="B " />
@@ -87,7 +91,7 @@
                                         </FormattedString>
                                     </Label.FormattedText>
                                 </Label>
-                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding BidVolumn}" HorizontalOptions="Center" />
+                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding BidVolumn}" HorizontalOptions="End" />
                                 <Label Grid.Row="1" Grid.Column="2" Text="{Binding AskVolumn}" HorizontalOptions="End" />
                             </Grid>
                         </Border>
